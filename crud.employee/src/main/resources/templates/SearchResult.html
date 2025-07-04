@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        /* Result container styling */
+        .result-container {
+            background-color: #ffffff;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+
+        /* Main heading styling */
+        h1 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        /* Styling for each data row */
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Label styling (e.g., "Name:") */
+        .label {
+            color: #555;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Value styling (the actual employee data) */
+        .value {
+            color: #333;
+            font-size: 1rem;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This container will hold the search result -->
+    <div class="result-container">
+        <h1>Employee Details</h1>
+        
+        <!-- Displaying Employee ID -->
+        <div class="result-item">
+            <span class="label">ID:</span>
+            <span class="value" th:text="${empObj.id}">[ID not found]</span>
+        </div>
+        
+        <!-- Displaying Employee Name -->
+        <div class="result-item">
+            <span class="label">Name:</span>
+            <span class="value" th:text="${empObj.name}">[Name not found]</span>
+        </div>
+        
+        <!-- Displaying Employee Department -->
+        <div class="result-item">
+            <span class="label">Department:</span>
+            <span class="value" th:text="${empObj.department}">[Department not found]</span>
+        </div>
+        
+        <!-- Displaying Employee Salary -->
+        <div class="result-item">
+            <span class="label">Salary:</span>
+            <span class="value" th:text="${empObj.salary}">[Salary not found]</span>
+        </div>
+    </div>
+
+</body>
+</html>

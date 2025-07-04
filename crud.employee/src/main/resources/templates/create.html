@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Employee</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Form container styling */
+        .form-container {
+            background-color: #ffffff;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        /* Heading styling */
+        h3 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* Styling for the form elements container */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 600;
+        }
+
+        /* Input field styling */
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Focus effect for input fields */
+        input[type="text"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+            outline: none;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.85rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        /* Hover effect for the submit button */
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h3>Fill Employee Info</h3>
+        <form action="create" method="post">
+            <!-- Group for Employee ID -->
+            <div class="form-group">
+                <label for="id">Employee ID:</label>
+                <input type="text" id="id" name="id" placeholder="e.g., 12345">
+            </div>
+
+            <!-- Group for Employee Name -->
+            <div class="form-group">
+                <label for="name">Employee Name:</label>
+                <input type="text" id="name" name="name" placeholder="e.g., John Doe">
+            </div>
+
+            <!-- Group for Employee Department -->
+            <div class="form-group">
+                <label for="department">Employee Department:</label>
+                <input type="text" id="department" name="department" placeholder="e.g., Technology">
+            </div>
+
+            <!-- Group for Employee Salary -->
+            <div class="form-group">
+                <label for="salary">Employee Salary:</label>
+                <input type="text" id="salary" name="salary" placeholder="e.g., 80000">
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" value="ADD EMPLOYEE">
+        </form>
+    </div>
+
+</body>
+</html>
